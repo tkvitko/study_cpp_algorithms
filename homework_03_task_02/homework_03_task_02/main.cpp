@@ -66,18 +66,20 @@ int main(int argc, const char * argv[]) {
     int* test_array = new int[] {3, 43, 38, 29, 18, 72, 57, 61, 2, 33};
     demonstrate(test_array, size);
     delete[] test_array;
-    
+
     size = 15;
     test_array = new int[] {88, 91, 87, 59, 53, 49, 29, 16, 4, 27, 28, 89, 2, 25, 74};
     demonstrate(test_array, size);
     delete[] test_array;
-    
+
     size = 18;
     test_array = new int[] {24, 66, 20, 79, 30, 16, 19, 62, 94, 59, 0, 7, 59, 90, 84, 60, 95, 62};
     demonstrate(test_array, size);
     delete[] test_array;
 
     // тесты пивотирования
+//    int size = 5;
+//    int* test_array = new int[size] {0, 44, 10, 55, 2};
 //    int limit = pivoting(test_array, size, 1);
 //    std::cout << limit << std::endl;
 //    for (int i = 0; i < size; ++i) {
