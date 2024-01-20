@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "pivoting(int*, int, int):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "(int(&amp;)[5]) *arr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "quick_sort(int*, int):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "(int(&amp;)[10]) *arr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
