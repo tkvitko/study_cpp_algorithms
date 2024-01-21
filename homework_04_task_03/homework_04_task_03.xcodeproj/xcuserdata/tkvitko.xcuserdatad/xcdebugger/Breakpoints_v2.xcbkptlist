@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "899E819D-21FC-4B8D-81AF-A69CFB440FCF"
+   uuid = "BD85D1F1-9F89-40BA-A6AB-F519D0B3040E"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8262A08B-A251-410B-AD3B-93D16CC07897"
+            uuid = "D48C63D0-3683-42D4-9EF1-F825C52DAF1B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "homework_04_task_02/main.cpp"
+            filePath = "homework_04_task_03/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "append_to_dynamic_array(arr, logical_size, actual_size, elem)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "remove_dynamic_array_head(arr, logical_size, actual_size, error_code)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7378BA25-72E8-4E6C-BDA2-3563C097DAC8"
+            uuid = "5F131301-F081-4766-B28A-46736C53C671"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "homework_04_task_02/main.cpp"
+            filePath = "homework_04_task_03/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "append_to_dynamic_array(arr, logical_size, actual_size, elem)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "remove_dynamic_array_head(arr, logical_size, actual_size)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

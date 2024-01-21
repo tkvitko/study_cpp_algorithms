@@ -34,10 +34,11 @@ int* interactive_create_dynamic_array(int logical_size, int actual_size) {
     }
 }
 
-void append_to_dynamic_array(int* arr, int& logical_size, int& actual_size, int elem) {
+int* append_to_dynamic_array(int* arr, int& logical_size, int& actual_size, int elem) {
     if (logical_size < actual_size) {
         arr[logical_size] = elem;
         logical_size++;
+        return arr;
     } else {
         actual_size *= 2;
         int* new_array = new int[actual_size] {0};
@@ -45,18 +46,9 @@ void append_to_dynamic_array(int* arr, int& logical_size, int& actual_size, int 
             new_array[i] = arr[i];
         };
         new_array[logical_size] = elem;
-        arr = nullptr;
         logical_size++;
-        arr = new_array;
+        return new_array;
     }
-}
-
-int interactive_append_to_dynamic_array(int* arr, int& logical_size, int& actual_size) {
-    int new_elem = 0;
-    std::cout << "Введите элемент для добавления: ";
-    std::cin >> new_elem;
-    append_to_dynamic_array(arr, logical_size, actual_size, new_elem);
-    return new_elem;
 }
 
 int main(int argc, const char * argv[]) {
@@ -71,15 +63,18 @@ int main(int argc, const char * argv[]) {
     int* new_array = interactive_create_dynamic_array(logical_size, actual_size);
     if (new_array != nullptr) {
         print_dynamic_array(new_array, logical_size, actual_size);
-    }
-    
-    int elem = -1;
-    while (elem != 0) {
-        elem = interactive_append_to_dynamic_array(new_array, logical_size, actual_size);
+
+        int elem = -1;
+        while (elem != 0) {
+            std::cout << "Введите элемент для добавления: ";
+            std::cin >> elem;
+            if (elem != 0) {
+                new_array = append_to_dynamic_array(new_array, logical_size, actual_size, elem);
+                print_dynamic_array(new_array, logical_size, actual_size);
+            }
+        }
+        std::cout << "Спасибо! Ваш массив: ";
         print_dynamic_array(new_array, logical_size, actual_size);
     }
-    std::cout << "Спасибо! Ваш массив: ";
-    print_dynamic_array(new_array, logical_size, actual_size);
-    
     return 0;
 }
