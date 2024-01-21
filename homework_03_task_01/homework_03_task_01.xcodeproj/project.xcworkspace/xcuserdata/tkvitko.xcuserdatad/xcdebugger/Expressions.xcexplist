@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "merge_sort(int*, int):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "(int(&amp;)[5]) *right">
+            </PersistentString>
+            <PersistentString
+               value = "(int(&amp;)[5]) *right_sorted">
+            </PersistentString>
+            <PersistentString
+               value = "(int(&amp;)[5]) *left_sorted">
+            </PersistentString>
+            <PersistentString
+               value = "(int(&amp;)[5]) *left">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

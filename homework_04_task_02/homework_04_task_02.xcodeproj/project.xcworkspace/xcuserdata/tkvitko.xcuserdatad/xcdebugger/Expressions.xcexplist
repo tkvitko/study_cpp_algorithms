@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "append_to_dynamic_array(int*, int, int, int):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "(int(&amp;)[5]) *arr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "append_to_dynamic_array(int*, int&amp;, int&amp;, int):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "(int(&amp;)[5]) *new_array">
+            </PersistentString>
+            <PersistentString
+               value = "(int(&amp;)[10]) *arr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
