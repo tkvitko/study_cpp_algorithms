@@ -45,7 +45,9 @@ int* merge(int* arr_1, int size_1,
 int* merge_sort(int* arr, int size) {
     if (size == 1) {
         // если длина массива уже 1, ничего не делаем
-        return arr;
+        int val = arr[0];
+        delete[] arr; //удаляем входной массив
+        return new int[1] {val}; //создаём новый выходной
     } else {
         
         // разбиваем массив на 2 половинки
@@ -62,30 +64,32 @@ int* merge_sort(int* arr, int size) {
         };
         
         // рекурсивно сортируем каждую половинку
-        int* left_sorted = new int[size_left] {0};
-        int* right_sorted = new int[size_right] {0};
-        left_sorted = merge_sort(left, size_left);
-        right_sorted = merge_sort(right, size_right);
-        for (int i = 0; i < size_left; ++i) {
-            std::cout << left_sorted[i] << " ";
-        }
-        std::cout << std::endl;
-        for (int i = 0; i < size_right; ++i) {
-            std::cout << right_sorted[i] << " ";
-        }
-        std::cout << std::endl;
+        int* left_sorted = merge_sort(left, size_left);
+        int* right_sorted = merge_sort(right, size_right);
+//        for (int i = 0; i < size_left; ++i) {
+//            std::cout << left_sorted[i] << " ";
+//        }
+//        std::cout << std::endl;
+//        for (int i = 0; i < size_right; ++i) {
+//            std::cout << right_sorted[i] << " ";
+//        }
+//        std::cout << std::endl;
         
         // сливаем отсортированные половинки и возвращаем
-        return merge(left_sorted, size_left, right_sorted, size_right);
+        int* merged = merge(left_sorted, size_left, right_sorted, size_right);
+        delete[] arr;
+        delete[] left_sorted;
+        delete[] right_sorted;
+        return merged;
     }
 }
 
 int main(int argc, const char * argv[]) {
     
-//    int size = 10;
-//    int* test_array = new int[] {3, 43, 38, 29, 18, 72, 57, 61, 2, 33};
-    int size = 7;
-    int* test_array = new int[] {38, 27, 43, 3, 9, 82, 10};
+    int size = 10;
+    int* test_array = new int[] {3, 43, 38, 29, 18, 72, 57, 61, 2, 33};
+//    int size = 7;
+//    int* test_array = new int[] {38, 27, 43, 3, 9, 82, 10};
     int* sorted_array = new int[size] {0};
     sorted_array = merge_sort(test_array, size);
 
