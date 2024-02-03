@@ -12,22 +12,19 @@
 void bfs(bool** graph, int vertex_number, int start) {
     bool* visited = new bool[vertex_number]{false};
     int* queue = new int[vertex_number]{-1};
-    int current_queue_position = 0;
+    int vertex_in_queue = 0;
     
-    if (!visited[start]) {
-        queue[current_queue_position] = start;
-        current_queue_position++;
-        for (int i = 0; i < vertex_number; ++i) {
-            int vertex = queue[i];
-            std::cout << vertex + 1 << " ";
-            visited[vertex] = true;
-            for (int j = 0; j < vertex_number; ++j) {
-                if (graph[vertex][j]) {
-                    if (!visited[j]) {
-                        queue[current_queue_position] = j;
-                        current_queue_position++;
-                    }
-                }
+    queue[vertex_in_queue] = start - 1;
+    vertex_in_queue++;
+    for (int i = 0; i < vertex_number; ++i) {
+        int vertex = queue[i];
+        std::cout << vertex + 1 << " ";
+        visited[vertex] = true;
+        for (int j = 0; j < vertex_number; ++j) {
+            if (graph[vertex][j] && !visited[j]) {
+                queue[vertex_in_queue] = j;
+                visited[j] = true;
+                vertex_in_queue++;
             }
         }
     }

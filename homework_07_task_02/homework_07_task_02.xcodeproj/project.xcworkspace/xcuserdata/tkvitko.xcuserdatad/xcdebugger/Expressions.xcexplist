@@ -6,6 +6,9 @@
          contextName = "bfs(bool**, int, int):main.cpp">
          <PersistentStrings>
             <PersistentString
+               value = "(int(&amp;)[7]) *neighbours">
+            </PersistentString>
+            <PersistentString
                value = "(int(&amp;)[7]) *queue">
             </PersistentString>
             <PersistentString
